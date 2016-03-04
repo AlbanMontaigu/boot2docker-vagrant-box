@@ -1,4 +1,10 @@
 
+##  1.10.2 (2016-03-04)
+- Update to [boot2docker 1.10.2](https://github.com/boot2docker/boot2docker/releases/tag/v1.10.2)
+- Update to packer 0.9.0
+- Rework of sharing system, now using ```B2D_SHARED_DIR_TYPE``` param and RSYNC by default to avoid virtualbox guest addition issue
+- Bootlocal support removed, it must be be managed in final project to have a clear control, see [template project example](https://github.com/AlbanMontaigu/boot2docker-vagrant-template)
+
 ## 2016-02-12 (1.10.1)
 - Update to [boot2docker 1.10.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.10.1)
 
