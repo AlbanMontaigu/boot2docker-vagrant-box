@@ -10,7 +10,7 @@ B2D_SHARED_DIR_VM = "/vagrant"
 
 # Default value if not set
 unless defined? B2D_SHARED_DIR_TYPE
-  B2D_SHARED_DIR_TYPE = "RSYNC"
+  B2D_SHARED_DIR_TYPE = ""
 end
 
 
