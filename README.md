@@ -14,17 +14,15 @@ If you work solely with Docker, this box lets you keep your Vagrant workflow and
 
 The box is available on [Hashicrop's Atlas](https://atlas.hashicorp.com/AlbanMontaigu/boxes/boot2docker), making it very easy to use it:
 * Download and include the proposed [vagrant template](https://github.com/AlbanMontaigu/boot2docker-vagrant-template) in your project
-* Run your environment with  ````vagrant up```
+* Run your environment with  ```vagrant up```
 
 If you want the actual box source file, you can download it from the [release page](https://github.com/AlbanMontaigu/boot2docker-vagrant-box/releases).
 
-## Tips & tricks
-
-### Network considerations
+## Network considerations
 
 By default, we use a NAT interfaces, which have its ports 2375 and 2376 (Docker IANA ports) forwarded to the loopback (localhost) of your physical host.
 
-### Customization
+## Customization
 
 If you want to tune contents, you can see how to achieve this with somthing like [vagrant template](https://github.com/AlbanMontaigu/boot2docker-vagrant-template).
 
