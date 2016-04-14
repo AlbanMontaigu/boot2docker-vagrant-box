@@ -22,16 +22,19 @@ su -c "tce-load -w -i mkisofs-tools" docker || :
 su -c "tce-load -w -i compiletc" docker || :
 su -c "tce-load -w -i autoconf" docker || :
 
-# Get tynicore linux package (with failover url)
-TCZ_SYS_URL_MAIN="http://tinycorelinux.net/7.x/x86/tcz/syslinux.tcz"
-TCZ_SYS_URL_MIRROR="http://distro.ibiblio.org/tinycorelinux/7.x/x86/tcz/syslinux.tcz"
-TCZ_SYS_URL=""
-if curl --output /dev/null --silent --head --fail "$TCZ_SYS_URL_MAIN"; then
-    TCZ_SYS_URL="$TCZ_SYS_URL_MAIN"
+# Get tynicore linux tcz repo url (with failover url)
+TCZ_VERSION="$(version | cut -d '.' -f 1).x"
+TCZ_URL_MAIN="http://tinycorelinux.net/$TCZ_VERSION/x86/tcz"
+TCZ_URL_MIRROR="http://distro.ibiblio.org/tinycorelinux/$TCZ_VERSION/x86/tcz"
+TCZ_URL=""
+if curl --output /dev/null --silent --head --fail "$TCZ_URL_MAIN/syslinux.tcz"; then
+    TCZ_URL="$TCZ_URL_MAIN"
 else
-    TCZ_SYS_URL="$TCZ_SYS_URL_MIRROR"
+    TCZ_URL="$TCZ_URL_MIRROR"
 fi
-curl -L -o /tmp/syslinux.tcz $TCZ_SYS_URL
+
+# Getting main package from tcz
+curl -L -o /tmp/syslinux.tcz $TCZ_SYS_URL/syslinux.tcz
 mount /tmp/syslinux.tcz /mnt/syslinux -o loop,ro
 
 # Extract the initrd.img (Linux root filesystem) from the iso
@@ -51,7 +54,7 @@ rm -f "${EXTRACT_DIR}/initrd.xz"
 
 # Install our custom tcz
 for TCZ_PACKAGE in popt attr acl rsync make m4; do
-	curl -LO "http://tinycorelinux.net/$(version | cut -d '.' -f 1).x/x86_64/tcz/${TCZ_PACKAGE}.tcz"; \
+	curl -LO "$TCZ_URL/${TCZ_PACKAGE}.tcz"; \
 	mount -o loop "./${TCZ_PACKAGE}.tcz" "${MNT_TMP_DIR}"
 	cd "${MNT_TMP_DIR}"
 	cp -a ./* "${EXTRACT_DIR}/"
