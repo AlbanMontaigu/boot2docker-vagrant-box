@@ -54,12 +54,12 @@ rm -f "${EXTRACT_DIR}/initrd.xz"
 
 # Install our custom tcz
 for TCZ_PACKAGE in popt attr acl rsync make m4; do
-	curl -LO "${TCZ_URL}/${TCZ_PACKAGE}.tcz"; \
-	mount -o loop "./${TCZ_PACKAGE}.tcz" "${MNT_TMP_DIR}"
-	cd "${MNT_TMP_DIR}"
-	cp -a ./* "${EXTRACT_DIR}/"
-	cd -
-	umount "${MNT_TMP_DIR}"
+    curl -LO "${TCZ_URL}/${TCZ_PACKAGE}.tcz"; \
+    mount -o loop "./${TCZ_PACKAGE}.tcz" "${MNT_TMP_DIR}"
+    cd "${MNT_TMP_DIR}"
+    cp -a ./* "${EXTRACT_DIR}/"
+    cd -
+    umount "${MNT_TMP_DIR}"
 done
 
 # Add option to the /opt/bootlocal.sh script
@@ -74,7 +74,7 @@ cd "/tmp/xorriso-${XORRISO_VERSION}"
 make
 make install
 cd -
-    
+
 # Generate the new initrd.img in new iso dir
 cd "${EXTRACT_DIR}"
 find | cpio -o -H newc | /usr/local/bin/xz -9 --format=lzma > "${NEW_ISO_DIR}/boot/initrd.img"
