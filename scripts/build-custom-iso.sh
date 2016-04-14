@@ -31,7 +31,7 @@ if curl --output /dev/null --silent --head --fail "${TCZ_URL_MAIN}/syslinux.tcz"
 else
     TCE_MIRROR="${TCE_MIRROR_ALTERNATIVE}"
     echo "${TCE_MIRROR}" > /opt/tcemirror
-    TCZ_URL="${TCZ_URL_MIRROR}"
+    TCZ_URL="${TCZ_URL_ALTERNATIVE}"
 fi
 
 # Install some custom tools on boot2docker

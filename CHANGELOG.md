@@ -3,7 +3,7 @@
 - Update to [boot2docker 1.11.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.11.0)
 - Update to [packer 0.10.0](https://github.com/mitchellh/packer/releases/tag/v0.10.0)
 - Update to tinycore linux 7.x
-- Now using failover url for tcz if main repo not available (as today...)
+- Now using failover url for tynicorelinux if main repo not available (as today...)
 
 ##  1.10.3 (2016-03-12)
 - Update to [boot2docker 1.10.3](https://github.com/boot2docker/boot2docker/releases/tag/v1.10.3)
