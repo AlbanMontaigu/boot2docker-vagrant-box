@@ -22,7 +22,7 @@ su -c "tce-load -w -i mkisofs-tools" docker || :
 su -c "tce-load -w -i compiletc" docker || :
 su -c "tce-load -w -i autoconf" docker || :
 
-curl -L -o /tmp/syslinux.tcz http://tinycorelinux.net/6.x/x86/tcz/syslinux.tcz
+curl -L -o /tmp/syslinux.tcz http://tinycorelinux.net/7.x/x86/tcz/syslinux.tcz
 mount /tmp/syslinux.tcz /mnt/syslinux -o loop,ro
 
 # Extract the initrd.img (Linux root filesystem) from the iso
