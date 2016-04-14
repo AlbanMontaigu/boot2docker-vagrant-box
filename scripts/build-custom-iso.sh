@@ -16,22 +16,29 @@ curl -L -o "${B2D_ISO_PATH}" "${B2D_ISO_URL}"
 rm -rf "${MNT_TMP_DIR}" "${EXTRACT_DIR}" "${NEW_ISO_DIR}"
 mkdir -p "${NEW_ISO_DIR}" "${EXTRACT_DIR}" "${MNT_TMP_DIR}" /mnt/syslinux
 
+# Get tynicore linux tcz repo url (with failover url)
+TCE_MIRROR_MAIN="http://tinycorelinux.net"
+TCE_MIRROR_ALTERNATIVE="http://distro.ibiblio.org/tinycorelinux"
+TCE_MIRROR=""
+TCZ_VERSION="$(version | cut -d '.' -f 1).x"
+TCZ_URL_SUFFIX="${TCZ_VERSION}/x86/tcz"
+TCZ_URL=""
+TCZ_URL_MAIN="${TCE_MIRROR_MAIN}/${TCZ_URL_SUFFIX}"
+TCZ_URL_ALTERNATIVE="${TCE_MIRROR_ALTERNATIVE}/${TCZ_URL_SUFFIX}"
+if curl --output /dev/null --silent --head --fail "${TCZ_URL_MAIN}/syslinux.tcz"; then
+    TCE_MIRROR="${TCE_MIRROR_MAIN}"
+    TCZ_URL="${TCZ_URL_MAIN}"
+else
+    TCE_MIRROR="${TCE_MIRROR_ALTERNATIVE}"
+    echo "${TCE_MIRROR}" > /opt/tcemirror
+    TCZ_URL="${TCZ_URL_MIRROR}"
+fi
+
 # Install some custom tools on boot2docker
 # Note that even if the install worked, tce-load return exit code to 1...
 su -c "tce-load -w -i mkisofs-tools" docker || :
 su -c "tce-load -w -i compiletc" docker || :
 su -c "tce-load -w -i autoconf" docker || :
-
-# Get tynicore linux tcz repo url (with failover url)
-TCZ_VERSION="$(version | cut -d '.' -f 1).x"
-TCZ_URL_MAIN="http://tinycorelinux.net/${TCZ_VERSION}/x86/tcz"
-TCZ_URL_MIRROR="http://distro.ibiblio.org/tinycorelinux/$TCZ_VERSION/x86/tcz"
-TCZ_URL=""
-if curl --output /dev/null --silent --head --fail "${TCZ_URL_MAIN}/syslinux.tcz"; then
-    TCZ_URL="${TCZ_URL_MAIN}"
-else
-    TCZ_URL="${TCZ_URL_MIRROR}"
-fi
 
 # Getting main package from tcz
 curl -L -o /tmp/syslinux.tcz "${TCZ_URL}/syslinux.tcz"
