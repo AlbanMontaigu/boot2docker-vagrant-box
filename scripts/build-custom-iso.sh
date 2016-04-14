@@ -22,7 +22,13 @@ su -c "tce-load -w -i mkisofs-tools" docker || :
 su -c "tce-load -w -i compiletc" docker || :
 su -c "tce-load -w -i autoconf" docker || :
 
-curl -L -o /tmp/syslinux.tcz http://tinycorelinux.net/7.x/x86/tcz/syslinux.tcz
+# Get tynicore linux package (with failover url)
+TCZ_SYS_URL="http://tinycorelinux.net/7.x/x86/tcz/syslinux.tcz"
+TCZ_SYS_URL_MIRROR="http://distro.ibiblio.org/tinycorelinux/7.x/x86/tcz/syslinux.tcz"
+if curl --output /dev/null --silent --head --fail "$TCZ_SYS_URL"; then
+  TCZ_SYS_URL="$TCZ_SYS_URL_MIRROR"
+fi
+curl -L -o /tmp/syslinux.tcz $TCZ_SYS_URL
 mount /tmp/syslinux.tcz /mnt/syslinux -o loop,ro
 
 # Extract the initrd.img (Linux root filesystem) from the iso
