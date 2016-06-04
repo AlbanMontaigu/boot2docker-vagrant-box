@@ -1,4 +1,7 @@
 
+## 1.11.2 (2016-06-04)
+- Update to [boot2docker 1.11.2](https://github.com/boot2docker/boot2docker/releases/tag/v1.11.2)
+
 ## 1.11.0 (2016-04-14)
 - Update to [boot2docker 1.11.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.11.0)
 - Update to [packer 0.10.0](https://github.com/mitchellh/packer/releases/tag/v0.10.0)
