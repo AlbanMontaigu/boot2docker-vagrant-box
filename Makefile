@@ -4,10 +4,10 @@
 # =============================================================================
 
 # Boot2docker configuration
-B2D_VERSION := 1.11.2
+B2D_VERSION := 1.12.0-rc5
 B2D_ISO_FILE := boot2docker.iso
 B2D_ISO_URL := https://github.com/boot2docker/boot2docker/releases/download/v$(B2D_VERSION)/boot2docker.iso
-B2D_ISO_CHECKSUM := 9a9dfd24261014f8ea44426c99fd2c49
+B2D_ISO_CHECKSUM := b889766ee798547a152d74fba86aa669
 
 # Packer configuration
 PACKER_TEMPLATE := template.json
