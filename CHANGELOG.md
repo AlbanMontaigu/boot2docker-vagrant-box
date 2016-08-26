@@ -1,4 +1,7 @@
 
+## 1.12.0 (2016-08-26)
+- Update to [boot2docker 1.12.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.1)
+
 ## 1.12.0 (2016-07-29)
 - Update to [boot2docker 1.12.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.0)
 
