@@ -8,9 +8,3 @@ dependencies:
 test:
   override:
     - make packer-validate
-deployment:
-  production:
-    branch: master
-    commands:
-      - make atlas-destroy-version
-      - make atlas-push
