@@ -2,6 +2,7 @@
 ## 1.12.1f (2016-09-17)
 - Update to XORRISO 1.4.6 in image build tools
 - M4 no more necessary now since it is loaded in docker-toolbox
+- Make no more necessary now since it is loaded in docker-toolbox
 
 ## 1.12.1 (2016-08-26)
 - Update to [boot2docker 1.12.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.1)

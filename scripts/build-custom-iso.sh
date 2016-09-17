@@ -60,7 +60,7 @@ cd -
 rm -f "${EXTRACT_DIR}/initrd.xz"
 
 # Install our custom tcz
-for TCZ_PACKAGE in popt attr acl rsync make; do
+for TCZ_PACKAGE in popt attr acl rsync; do
     curl -LO "${TCZ_URL}/${TCZ_PACKAGE}.tcz"; \
     mount -o loop "./${TCZ_PACKAGE}.tcz" "${MNT_TMP_DIR}"
     cd "${MNT_TMP_DIR}"
