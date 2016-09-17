@@ -55,7 +55,7 @@ $(PRL_B2D_ISO_FILE):
 virtualbox-clean:
 	rm -f *_virtualbox.box $(B2D_ISO_FILE)
 
-virtualbox-build: $(B2D_ISO_FILE) packer-file packer-validate
+virtualbox-build: $(B2D_ISO_FILE) packer-file
 	packer build -only=virtualbox-iso \
 		${PACKER_TEMPLATE}
 
