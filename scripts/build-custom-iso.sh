@@ -73,7 +73,7 @@ done
 echo "/usr/local/etc/init.d/nfs-client start" | tee -a "${EXTRACT_DIR}/opt/bootlocal.sh"
 
 # Last part will need to recompile ourself xorriso since syslinux (with isohybrid) nor xorriso exists as it in TCL in 64Bits
-XORRISO_VERSION=1.4.0
+XORRISO_VERSION=1.4.6
 curl -L -o "/tmp/xorriso-${XORRISO_VERSION}.tar.gz" "http://www.gnu.org/software/xorriso/xorriso-${XORRISO_VERSION}.tar.gz"
 tar -x -z -f "/tmp/xorriso-${XORRISO_VERSION}.tar.gz" -C /tmp/
 cd "/tmp/xorriso-${XORRISO_VERSION}"
