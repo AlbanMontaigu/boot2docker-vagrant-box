@@ -1,8 +1,10 @@
 #!/bin/sh
 
+# Shell execution configuration
 set -x
 set -e
 
+# Env var configuration
 MNT_TMP_DIR="/tmp/mnt"
 EXTRACT_DIR="/tmp/extract"
 NEW_ISO_DIR="/tmp/newiso"
@@ -13,6 +15,7 @@ NEW_B2D_ISO_PATH="/tmp/boot2docker-vagrant.iso"
 curl -L -o "${B2D_ISO_PATH}" "${B2D_ISO_URL}"
 # END AMU 20150625
 
+# Prepare directories layout
 rm -rf "${MNT_TMP_DIR}" "${EXTRACT_DIR}" "${NEW_ISO_DIR}"
 mkdir -p "${NEW_ISO_DIR}" "${EXTRACT_DIR}" "${MNT_TMP_DIR}" /mnt/syslinux
 
@@ -96,4 +99,3 @@ cd -
     -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat \
     -isohybrid-mbr /mnt/syslinux/usr/local/share/syslinux/isohdpfx.bin \
     -o "${NEW_B2D_ISO_PATH}" "${NEW_ISO_DIR}"
-
