@@ -55,7 +55,7 @@ $(PRL_B2D_ISO_FILE):
 	curl -L -o ${PRL_B2D_ISO_FILE} ${PRL_B2D_ISO_URL}
 
 virtualbox-clean:
-	rm -f *_virtualbox.box $(B2D_ISO_FILE)
+	rm -f *.box $(B2D_ISO_FILE)
 
 virtualbox-build: $(B2D_ISO_FILE) packer-file packer-validate
 	packer build -only=virtualbox-iso \
