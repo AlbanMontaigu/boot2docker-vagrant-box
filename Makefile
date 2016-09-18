@@ -5,6 +5,7 @@
 
 # Boot2docker configuration
 B2D_VERSION := 1.12.1
+B2D_BOX_VERSION := 1.12.1f
 B2D_ISO_FILE := boot2docker.iso
 B2D_ISO_URL := https://github.com/boot2docker/boot2docker/releases/download/v$(B2D_VERSION)/boot2docker.iso
 B2D_ISO_CHECKSUM := 2b638819f1a5143a5a6578795b77874a
@@ -31,6 +32,7 @@ all: virtualbox
 packer-file:
 	ATLAS_USERNAME=${ATLAS_USERNAME} \
 	ATLAS_NAME=${ATLAS_NAME} \
+	B2D_BOX_VERSION=${B2D_BOX_VERSION} \
 	B2D_ISO_VERSION=${B2D_VERSION} \
 	B2D_ISO_URL=${B2D_ISO_URL} \
 	B2D_ISO_CHECKSUM=${B2D_ISO_CHECKSUM} \

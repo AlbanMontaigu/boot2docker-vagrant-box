@@ -7,6 +7,7 @@ changequote(<!,!>)
     "variables": {
         "ATLAS_USERNAME": "esyscmd(echo -n $ATLAS_USERNAME)",
         "ATLAS_NAME": "esyscmd(echo -n $ATLAS_NAME)",
+        "B2D_BOX_VERSION": "esyscmd(echo -n $B2D_BOX_VERSION)",
         "B2D_ISO_VERSION": "esyscmd(echo -n $B2D_ISO_VERSION)",
         "B2D_ISO_URL": "esyscmd(echo -n $B2D_ISO_URL)",
         "B2D_ISO_CHECKSUM": "esyscmd(echo -n $B2D_ISO_CHECKSUM)"
@@ -48,7 +49,7 @@ changequote(<!,!>)
             "type": "vagrant",
             "keep_input_artifact": false,
             "vagrantfile_template": "vagrantfile.tpl",
-            "output": "boot2docker_{{.Provider}}_v{{user `B2D_ISO_VERSION`}}.box"
+            "output": "boot2docker_{{.Provider}}_v{{user `B2D_BOX_VERSION`}}.box"
         }]
     ]
 }
