@@ -3,7 +3,7 @@
 - Update to XORRISO 1.4.6 in image build tools
 - M4 no more necessary now since it is loaded in docker-toolbox
 - Make no more necessary now since it is loaded in docker-toolbox
-- Added ```glibc-apps``` tcz to fix ```Vagrant was unable to mount VirtualBox shared folders``` issue due to missing getent and vagrant 1.8.5 incompatibility
+- Added ```glibc-apps``` tcz to fix ```Vagrant was unable to mount VirtualBox shared folders``` issue due to missing ```getent``` and vagrant 1.8.5 incompatibility
 
 ## 1.12.1 (2016-08-26)
 - Update to [boot2docker 1.12.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.1)
