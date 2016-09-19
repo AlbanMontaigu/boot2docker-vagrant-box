@@ -62,7 +62,7 @@ virtualbox-build: $(B2D_ISO_FILE) packer-file packer-validate
 		${PACKER_TEMPLATE}
 
 atlas-destroy-version:
-	curl https://atlas.hashicorp.com/api/v1/box/AlbanMontaigu/boot2docker/version/${B2D_VERSION} \
+	curl https://atlas.hashicorp.com/api/v1/box/AlbanMontaigu/boot2docker/version/${B2D_BOX_VERSION} \
 		-X DELETE \
 		-d access_token='${ATLAS_TOKEN}'
 
@@ -76,6 +76,7 @@ atlas-virtualbox-test:
 		ATLAS_USERNAME=${ATLAS_USERNAME} \
 		ATLAS_NAME=${ATLAS_NAME} \
 		B2D_VERSION=${B2D_VERSION} \
+		B2D_BOX_VERSION=${B2D_BOX_VERSION} \
 		bats --tap *.bats
 
 

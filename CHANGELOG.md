@@ -4,6 +4,7 @@
 - M4 no more necessary now since it is loaded in docker-toolbox
 - Make no more necessary now since it is loaded in docker-toolbox
 - Added ```glibc-apps``` tcz to fix ```Vagrant was unable to mount VirtualBox shared folders``` issue due to missing ```getent``` and vagrant 1.8.5 incompatibility
+- Now ```B2D_VERSION``` and ```B2D_BOX_VERSION``` should be fully separated
 
 ## 1.12.1 (2016-08-26)
 - Update to [boot2docker 1.12.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.1)

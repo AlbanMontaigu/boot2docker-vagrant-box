@@ -7,7 +7,7 @@
 	# Ensure the VM is stopped
 	run vagrant stop
 	run vagrant destroy -f
-	run vagrant box remove --force --provider virtualbox --box-version ${B2D_VERSION} ${ATLAS_USERNAME}/${ATLAS_NAME}
+	run vagrant box remove --force --provider virtualbox --box-version ${B2D_BOX_VERSION} ${ATLAS_USERNAME}/${ATLAS_NAME}
 	m4 Vagrantfile.m4 > Vagrantfile
 	vagrant up --provider=virtualbox
 	[ $( vagrant status | grep 'running' | wc -l ) -ge 1 ]
