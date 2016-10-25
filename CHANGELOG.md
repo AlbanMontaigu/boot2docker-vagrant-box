@@ -1,6 +1,7 @@
 
 ## 1.12.2 (2016-10-25)
 - Update to [boot2docker 1.12.2](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.2)
+- Build on atlas is no more alive since it became a paid service
 
 ## 1.12.1f (2016-09-19)
 - Update to XORRISO 1.4.6 in image build tools
