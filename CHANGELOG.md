@@ -3,6 +3,8 @@
 - Update to [boot2docker 1.12.3](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.3)
 - Improved build custom iso process
 - No nfs client started by default on bootlocal.sh
+- Improved vagrantfile.tpl
+- Option --natdnshostresolver1 set to on for virtualbox
 
 ## 1.12.2 (2016-10-25)
 - Update to [boot2docker 1.12.2](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.2)

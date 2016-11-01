@@ -47,10 +47,14 @@ Vagrant.configure("2") do |config|
   # -----------------------------------
   # Virtualbox specific configuration
   # -----------------------------------
-  config.vm.provider "virtualbox" do |v, override|
-    # Expose the Docker ports (non secured AND secured)
-    override.vm.network "forwarded_port", guest: 2375, host: 2375, host_ip: "127.0.0.1", auto_correct: true, id: "docker"
-    override.vm.network "forwarded_port", guest: 2376, host: 2376, host_ip: "127.0.0.1", auto_correct: true, id: "docker-ssl"
+  config.vm.provider "virtualbox" do |vm|
+    vm.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
+  
+  # -----------------------------------
+  # Expose the Docker ports
+  # -----------------------------------
+  config.vm.network "forwarded_port", guest: 2375, host: 2375, host_ip: "127.0.0.1", auto_correct: true, id: "docker"
+  config.vm.network "forwarded_port", guest: 2376, host: 2376, host_ip: "127.0.0.1", auto_correct: true, id: "docker-ssl"
 
 end
