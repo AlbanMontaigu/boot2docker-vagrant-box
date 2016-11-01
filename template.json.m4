@@ -57,7 +57,7 @@ changequote(<!,!>)
         },
         {
          "type": "atlas",
-         "only": ["virtualbox-iso"],
+         "only": ["x64-virtualbox"],
          "artifact": "{{user `ATLAS_USERNAME`}}/{{user `ATLAS_NAME`}}",
          "artifact_type": "vagrant.box",
          "metadata": {
