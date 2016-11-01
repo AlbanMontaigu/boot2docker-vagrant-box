@@ -21,7 +21,7 @@ changequote(<!,!>)
             "name" : "x64-virtualbox",
             "headless": "true",
             "vboxmanage": [
-                ["modifyvm","{{.Name}}","--memory","1536"],
+                ["modifyvm","{{.Name}}","--memory","1536"]
             ],
             "disk_size": 100000,
             "iso_url": "{{user `B2D_ISO_URL`}}",
