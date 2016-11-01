@@ -18,8 +18,8 @@ curl -L -o "${B2D_ISO_PATH}" "${B2D_ISO_URL}"
 # END AMU 20150625
 
 # Prepare directories layout
-rm -rf "${MNT_TMP_DIR}" "${EXTRACT_DIR}" "${NEW_ISO_DIR}" "${SYSLINUX_DIR}"
-mkdir -p "${NEW_ISO_DIR}" "${EXTRACT_DIR}" "${MNT_TMP_DIR}" "${SYSLINUX_DIR}"
+rm -rf "${MNT_TMP_DIR}" "${EXTRACT_DIR}" "${NEW_ISO_DIR}" "${SYSLINUX_DIR}" "${LOCAL_TCZ_PATH}"
+mkdir -p "${NEW_ISO_DIR}" "${EXTRACT_DIR}" "${MNT_TMP_DIR}" "${SYSLINUX_DIR}" "${LOCAL_TCZ_PATH}"
 
 # Get tynicore linux tcz repo url (with failover url)
 TCE_MIRROR_MAIN="http://tinycorelinux.net"
