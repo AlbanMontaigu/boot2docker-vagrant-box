@@ -58,7 +58,7 @@ virtualbox-clean:
 	rm -f *.box $(B2D_ISO_FILE)
 
 virtualbox-build: $(B2D_ISO_FILE) packer-file packer-validate
-	packer build -only=virtualbox-iso \
+	packer build -only=x64-virtualbox \
 		${PACKER_TEMPLATE}
 
 atlas-destroy-version:
