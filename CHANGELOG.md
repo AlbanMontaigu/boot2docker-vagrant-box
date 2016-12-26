@@ -1,4 +1,7 @@
 
+## 1.12.3 (2016-12-26)
+- Update to [boot2docker 1.12.5](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.5)
+
 ## 1.12.3 (2016-11-01)
 - Update to [boot2docker 1.12.3](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.3)
 - Improved build custom iso process
