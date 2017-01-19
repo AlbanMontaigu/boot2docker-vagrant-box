@@ -1,6 +1,7 @@
 
 ## 1.12.6 (2017-01-19)
 - UPDATE: Update to [boot2docker 1.12.6](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.6) (thanks joehandwell)
+- UPDATE: Atlas post processor removed since it may cause issues for some builds
 
 ## 1.12.5 (2016-12-26)
 - UPDATE: Update to [boot2docker 1.12.5](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.5)

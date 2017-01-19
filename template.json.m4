@@ -54,16 +54,6 @@ changequote(<!,!>)
             "keep_input_artifact": false,
             "vagrantfile_template": "vagrantfile.tpl",
             "output": "boot2docker_{{.Provider}}_v{{user `B2D_BOX_VERSION`}}.box"
-        },
-        {
-         "type": "atlas",
-         "only": ["x64-virtualbox"],
-         "artifact": "{{user `ATLAS_USERNAME`}}/{{user `ATLAS_NAME`}}",
-         "artifact_type": "vagrant.box",
-         "metadata": {
-             "provider": "virtualbox",
-             "version": "{{user `B2D_BOX_VERSION`}}"
-         }
         }]
     ]
 }
