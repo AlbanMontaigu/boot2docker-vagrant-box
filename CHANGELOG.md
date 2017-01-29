@@ -4,7 +4,8 @@
 - UPDATE: Update to packer 0.12.2 on circleci
 - UPDATE: Readme updated
 - BUGFIX: Remove test regarding make, m4, nfs since no more available as it in the box
-- BUGFIX: Parasite cmd output that fails test fixed 
+- BUGFIX: Parasite cmd output that fails test fixed
+- FEATURE: Test "Container hello-world is pulled properly" added
 - FEATURE: Test "Container hello-world runs properly" added
 
 ## 1.12.6 (2017-01-19)

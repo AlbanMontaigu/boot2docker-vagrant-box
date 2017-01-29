@@ -39,6 +39,10 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
 	[ $(vagrant ssh -c 'grep OK /tmp/token-boot-local | wc -l' -- -n -T | tail -n1) -eq 1 ]
 }
 
+@test "Container hello-world is pulled properly" {
+	vagrant ssh -c 'docker pull hello-world'
+}
+
 @test "Container hello-world runs properly" {
     HELLO_WORLD_MSG_N1=$(vagrant ssh -c 'docker run hello-world' -- -n -T | tail -n1)
 	[ "${HELLO_WORLD_MSG_N1}" == "This message shows that your installation appears to be working correctly." ]
