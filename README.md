@@ -33,8 +33,8 @@ If you want to recreate the box, rather than using the binary, then you can use 
 To build the box, first install the following prerequisites:
 
   * [Make as workflow engine](http://www.gnu.org/software/make/)
-  * [Packer as vagrant basebox builder](http://www.packer.io) (at least version 0.7.5)
-  * [VirtualBox](http://www.virtualbox.org) (at least version 4.3.28)
+  * [Packer as vagrant basebox builder](http://www.packer.io) (at least version 0.12.x)
+  * [VirtualBox](http://www.virtualbox.org) (at least version 5.1.x)
   * [curl for downloading things](http://curl.haxx.se)
   * [bats for testing](https://github.com/sstephenson/bats)
 
