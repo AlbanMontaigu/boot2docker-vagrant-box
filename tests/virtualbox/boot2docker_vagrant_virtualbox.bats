@@ -18,7 +18,7 @@
 }
 
 @test "Default ssh user has sudoers rights" {
-	[ "$(vagrant ssh -c 'sudo whoami' -- -n -T)" == "root" ]
+	[ "$(vagrant ssh -c 'sudo whoami' -- -n -T | tail -n1)" == "root" ]
 }
 
 @test "Docker client exists in the remote VM" {
@@ -36,7 +36,7 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
 }
 
 @test "My bootlocal.sh script, should have been run at boot" {
-	[ $(vagrant ssh -c 'grep OK /tmp/token-boot-local | wc -l' -- -n -T) -eq 1 ]
+	[ $(vagrant ssh -c 'grep OK /tmp/token-boot-local | wc -l' -- -n -T | tail -n1) -eq 1 ]
 }
 
 @test "We can reboot the VM properly" {
