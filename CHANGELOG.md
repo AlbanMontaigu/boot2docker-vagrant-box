@@ -3,6 +3,7 @@
 - UPDATE: Update to [boot2docker 1.13.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.13.0)
 - UPDATE: Update to packer 0.12.2 on circleci
 - UPDATE: Readme updated
+- BUGFIX: Remove test regarding make, m4, nfs since no more available as it in the box
 
 ## 1.12.6 (2017-01-19)
 - UPDATE: Update to [boot2docker 1.12.6](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.6) (thanks joehandwell)

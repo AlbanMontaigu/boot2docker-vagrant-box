@@ -48,23 +48,6 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
 	vagrant ssh -c "which rsync"
 }
 
-@test "Make is installed inside the b2d" {
-	vagrant ssh -c "which make"
-}
-
-@test "M4 is installed inside the b2d" {
-	vagrant ssh -c "which m4"
-}
-
-@test "The NFS client is started inside the VM" {
-	[ $(vagrant ssh -c 'ps aux | grep rpc.statd | wc -l' -- -n -T) -ge 1 ]
-}
-
-@test "We have a default synced folder thru vboxsf instead of NFS" {
-	mount_point=$(vagrant ssh -c 'mount' | grep vboxsf | awk '{ print $3 }')
-	[ $(vagrant ssh -c "ls -l ${mount_point}/Vagrantfile | wc -l" -- -n -T) -ge 1 ]
-}
-
 @test "We can share folder thru rsync" {
 	sed -i -e 's/#SYNC_TOKEN/config.vm.synced_folder ".", "\/vagrant", type: "rsync"/g' Vagrantfile
 	vagrant reload
