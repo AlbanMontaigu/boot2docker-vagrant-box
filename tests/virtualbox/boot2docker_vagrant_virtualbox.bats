@@ -44,8 +44,8 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
 }
 
 @test "Container hello-world runs properly" {
-    HELLO_WORLD_MSG_N1=$(vagrant ssh -c 'docker run hello-world' -- -n -T | tail -n1)
-	[ "${HELLO_WORLD_MSG_N1}" == "This message shows that your installation appears to be working correctly." ]
+    HELLO_WORLD_MSG_N1=$(vagrant ssh -c 'docker run hello-world' -- -n -T | sed -n 3p)
+	[ "${HELLO_WORLD_MSG_N1}" == "Hello from Docker!" ]
 }
 
 @test "We can reboot the VM properly" {
