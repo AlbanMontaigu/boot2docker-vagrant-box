@@ -53,6 +53,10 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
 	vagrant ssh -c 'echo OK'
 }
 
+@test "Local files are shared in /vagrant in the VM" {
+    vagrant ssh -c 'ls /vagrant/boot2docker_vagrant_virtualbox.bats'
+}
+
 @test "Rsync is installed inside the remote VM" {
 	vagrant ssh -c "which rsync"
 }
