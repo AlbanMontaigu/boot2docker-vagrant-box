@@ -5,6 +5,7 @@
 - UPDATE: Readme updated
 - BUGFIX: Remove test regarding make, m4, nfs since no more available as it in the box
 - BUGFIX: Parasite cmd output that fails test fixed 
+- FEATURE: Test "Container hello-world runs properly" added
 
 ## 1.12.6 (2017-01-19)
 - UPDATE: Update to [boot2docker 1.12.6](https://github.com/boot2docker/boot2docker/releases/tag/v1.12.6) (thanks joehandwell)
