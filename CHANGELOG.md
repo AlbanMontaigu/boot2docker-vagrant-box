@@ -3,6 +3,7 @@
 - UPDATE: Update to [boot2docker 1.13.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.13.0)
 - UPDATE: Update to packer 0.12.2 on circleci
 - UPDATE: Readme updated
+- UPDATE: Test messages more clear
 - BUGFIX: Remove test regarding make, m4, nfs since no more available as it in the box
 - BUGFIX: Parasite cmd output that fails test fixed
 - FEATURE: Test "Container hello-world is pulled properly" added
