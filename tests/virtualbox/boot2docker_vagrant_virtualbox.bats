@@ -31,7 +31,7 @@
 
 DOCKER_TARGET_VERSION=${B2D_VERSION}
 @test "Docker is version DOCKER_TARGET_VERSION=${DOCKER_TARGET_VERSION}" {
-	DOCKER_VERSION=$(vagrant ssh -c "docker version --format '{{.Server.Version}}'" -- -n -T)
+	DOCKER_VERSION=$(vagrant ssh -c "docker version --format '{{.Server.Version}}'" -- -n -T | tail -n1)
 	[ "${DOCKER_VERSION}" == "${DOCKER_TARGET_VERSION}" ]
 }
 
