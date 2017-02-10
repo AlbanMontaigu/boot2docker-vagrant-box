@@ -1,4 +1,7 @@
 
+## 1.13.1 (2017-02-10)
+- UPDATE: Update to [boot2docker 1.13.1](https://github.com/boot2docker/boot2docker/releases/tag/v1.13.1) (thanks joehandwell)
+
 ## 1.13.0 (2017-01-29)
 - UPDATE: Update to [boot2docker 1.13.0](https://github.com/boot2docker/boot2docker/releases/tag/v1.13.0)
 - UPDATE: Update to packer 0.12.2 on circleci
