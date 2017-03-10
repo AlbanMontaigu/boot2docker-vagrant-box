@@ -1,5 +1,5 @@
 
-## v17.03.0-ce (2017-03-10)
+## 17.03.0ce (2017-03-10)
 - UPDATE: Update to [boot2docker 17.03.0ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.03.0-ce)
 - UPDATE: Update to packer 0.12.3 
 
