@@ -5,7 +5,7 @@
 
 # Boot2docker configuration
 B2D_VERSION := 17.04.0-ce
-B2D_BOX_VERSION := 17.04.0ce
+B2D_BOX_VERSION := 17.04.0-ce
 B2D_ISO_FILE := boot2docker.iso
 B2D_ISO_URL := https://github.com/boot2docker/boot2docker/releases/download/v$(B2D_VERSION)/boot2docker.iso
 B2D_ISO_CHECKSUM := c769b9be48bf9bece7ffb067ce4f2bb0
