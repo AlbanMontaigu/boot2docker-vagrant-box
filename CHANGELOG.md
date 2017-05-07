@@ -1,4 +1,7 @@
 
+## 17.05.0-ce (2017-05-07)
+- UPDATE: Update to [boot2docker 17.05.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.05.0-ce)
+
 ## 17.04.0-ce (2017-04-10)
 - UPDATE: Update to [boot2docker 17.04.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.04.0-ce)
 - UPDATE: try to go back to docker standard version name
