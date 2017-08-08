@@ -24,7 +24,7 @@ By default, we use a NAT interfaces, which have its ports 2375 and 2376 (Docker 
 
 ## Customization
 
-If you want to tune contents, you can see how to achieve this with somthing like [vagrant template](https://github.com/AlbanMontaigu/boot2docker-vagrant-template).
+If you want to tune contents, you can see how to achieve this with something like [vagrant template](https://github.com/AlbanMontaigu/boot2docker-vagrant-template).
 
 ## Building the Box
 
