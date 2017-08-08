@@ -57,6 +57,11 @@ DOCKER_TARGET_VERSION=${B2D_VERSION}
     vagrant ssh -c 'ls /vagrant/boot2docker_vagrant_virtualbox.bats'
 }
 
+@test "Common files are shared in /vagrant/.vagrant/b2d_common in the VM" {
+     vagrant ssh -c 'echo OK > /vagrant/.vagrant/b2d_common/token-b2d-shared-dir-common'
+     vagrant ssh -c 'ls /vagrant/.vagrant/b2d_common/token-b2d-shared-dir-common'
+}
+
 @test "Rsync is installed inside the remote VM" {
 	vagrant ssh -c "which rsync"
 }
