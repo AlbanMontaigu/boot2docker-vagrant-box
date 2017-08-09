@@ -1,5 +1,5 @@
 
-## 17.06.0-ce (2017-08-08)
+## 17.XX.X-ce (2017-08-08)
 - FEATURE: common shared directory definition added in VAGRANT_HOME/b2d_common to enable file sharing between multiple instances
 
 ## 17.06.0-ce (2017-07-05)
