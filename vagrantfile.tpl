@@ -10,6 +10,11 @@
 B2D_SHARED_DIR_LOCAL_HOST = "."
 B2D_SHARED_DIR_LOCAL_VM = "/vagrant"
 
+# Default value for VAGRANT_HOME if not set
+unless defined? VAGRANT_HOME
+  VAGRANT_HOME = "~/.vagrant.d"
+end
+
 # Common share for all VM
 B2D_SHARED_DIR_COMMON_HOST = "#{VAGRANT_HOME}/b2d_common"
 B2D_SHARED_DIR_COMMON_VM = "#{B2D_SHARED_DIR_LOCAL_VM}/.vagrant/b2d_common"
