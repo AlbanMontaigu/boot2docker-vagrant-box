@@ -46,15 +46,15 @@ Vagrant.configure("2") do |config|
   # -----------------------------------
   puts case B2D_SHARED_DIR_TYPE
   when "NFS"
-    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_VM, B2D_SHARED_DIR_LOCAL_VM, type: "nfs", mount_options: ["nolock", "vers=3", "udp"], id: "nfs-sync"
-    config.vm.synced_folder B2D_SHARED_DIR_COMMON_VM, B2D_SHARED_DIR_COMMON_VM, type: "nfs", mount_options: ["nolock", "vers=3", "udp"], id: "nfs-sync", create: true
+    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_HOST, B2D_SHARED_DIR_LOCAL_VM, type: "nfs", mount_options: ["nolock", "vers=3", "udp"], id: "nfs-sync"
+    config.vm.synced_folder B2D_SHARED_DIR_COMMON_HOST, B2D_SHARED_DIR_COMMON_VM, type: "nfs", mount_options: ["nolock", "vers=3", "udp"], id: "nfs-sync", create: true
   when "RSYNC"
-    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_VM, B2D_SHARED_DIR_LOCAL_VM, type: "rsync", rsync__auto: true
-    config.vm.synced_folder B2D_SHARED_DIR_COMMON_VM, B2D_SHARED_DIR_COMMON_VM, type: "rsync", rsync__auto: true, create: true
+    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_HOST, B2D_SHARED_DIR_LOCAL_VM, type: "rsync", rsync__auto: true
+    config.vm.synced_folder B2D_SHARED_DIR_COMMON_HOST, B2D_SHARED_DIR_COMMON_VM, type: "rsync", rsync__auto: true, create: true
   else
     # Default vb guest additions
-    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_VM, B2D_SHARED_DIR_LOCAL_VM
-    config.vm.synced_folder B2D_SHARED_DIR_COMMON_VM, B2D_SHARED_DIR_COMMON_VM, create: true
+    config.vm.synced_folder B2D_SHARED_DIR_LOCAL_HOST, B2D_SHARED_DIR_LOCAL_VM
+    config.vm.synced_folder B2D_SHARED_DIR_COMMON_HOST, B2D_SHARED_DIR_COMMON_VM, create: true
   end
 
 
