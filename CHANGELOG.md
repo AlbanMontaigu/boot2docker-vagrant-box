@@ -1,6 +1,7 @@
 
-## 17.XX.X-ce (2017-08-08)
+## 17.06.1-ce (2017-08-21)
 - FEATURE: common shared directory definition added in VAGRANT_HOME/b2d_common to enable file sharing between multiple instances
+- UPDATE: Update to [boot2docker 17.06.1-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.06.1-ce)
 
 ## 17.06.0-ce (2017-07-05)
 - UPDATE: Update to [boot2docker 17.06.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.06.0-ce)
