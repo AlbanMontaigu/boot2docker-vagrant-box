@@ -4,7 +4,7 @@
 
 Forked from [dduportal/boot2docker-vagrant-box](https://github.com/dduportal/boot2docker-vagrant-box), thanks Damien !
 
-My fork is a simplier version (no parallels support) with my personal touch.
+My fork is a simpler version (no parallels support) with my personal touch.
 
 This repository contains the scripts necessary to create a Vagrant compatible [boot2docker](https://github.com/boot2docker/boot2docker) box.
 
@@ -33,8 +33,8 @@ If you want to recreate the box, rather than using the binary, then you can use 
 To build the box, first install the following prerequisites:
 
   * [Make as workflow engine](http://www.gnu.org/software/make/)
-  * [Packer as vagrant basebox builder](http://www.packer.io) (at least version 0.12.x)
-  * [VirtualBox](http://www.virtualbox.org) (at least version 5.1.x)
+  * [Packer as vagrant basebox builder](http://www.packer.io)
+  * [VirtualBox](http://www.virtualbox.org)
   * [curl for downloading things](http://curl.haxx.se)
   * [bats for testing](https://github.com/sstephenson/bats)
 
