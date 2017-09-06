@@ -10,6 +10,11 @@ This repository contains the scripts necessary to create a Vagrant compatible [b
 
 If you work solely with Docker, this box lets you keep your Vagrant workflow and work in the most minimal Docker environment possible.
 
+## Following docker stable versions
+
+https://download.docker.com/linux/static/stable/x86_64/
+
+
 ## Usage
 
 The box is available on [Hashicrop's Atlas](https://atlas.hashicorp.com/AlbanMontaigu/boxes/boot2docker), making it very easy to use it:
