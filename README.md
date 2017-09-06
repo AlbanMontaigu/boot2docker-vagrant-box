@@ -14,7 +14,7 @@ If you work solely with Docker, this box lets you keep your Vagrant workflow and
 
 This project aims to follow mainly docker stable releases. Meaning that each docker release, especially test ones may not be published here.
 
-For more informations please check [docker stable releases](https://download.docker.com/linux/static/stable/x86_64/) and [time based release schedule](https://docs.docker.com/engine/installation/#time-based-release-schedule).
+For more information please check [docker stable releases](https://download.docker.com/linux/static/stable/x86_64/) and [time based release schedule](https://docs.docker.com/engine/installation/#time-based-release-schedule).
 
 ## Usage
 
