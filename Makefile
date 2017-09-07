@@ -8,7 +8,7 @@ B2D_VERSION := 17.06.2-ce
 B2D_BOX_VERSION := 17.06.2-ce
 B2D_ISO_FILE := boot2docker.iso
 B2D_ISO_URL := https://github.com/boot2docker/boot2docker/releases/download/v$(B2D_VERSION)/boot2docker.iso
-B2D_ISO_CHECKSUM := 1ab643de4778810fab14de87236a22ef
+B2D_ISO_CHECKSUM := 926fcd7e1ce672ba2b81e6d4a4d11de7
 
 # Packer configuration
 PACKER_TEMPLATE := template.json
