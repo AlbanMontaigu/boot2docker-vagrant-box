@@ -1,0 +1,27 @@
+version: 2
+
+# =======================================================================
+# JOBS definition
+# =======================================================================
+jobs:
+
+# --------------------------------------------
+# JOB: build and test packer file
+# --------------------------------------------
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            wget https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip -O /tmp/packer.zip && sudo unzip /tmp/packer.zip -d /usr/local/bin
+            sudo apt-get -y update && sudo apt-get -y install m4
+      - run:
+          name: Make the packer file
+          command: |
+            make packer-file
+      - run:
+          name: Test packer file validity
+          command: |
+            make packer-validate
