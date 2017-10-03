@@ -1,4 +1,7 @@
 
+## 17.09.0-ce (2017-10-03)
+- UPDATE: Update to [boot2docker 17.09.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.09.0-ce)
+
 ## 17.06.2-ce (2017-09-07)
 - UPDATE: Update to [boot2docker 17.06.2-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.06.2-ce)
 - UPDATE: move to CircleCI 2.0
