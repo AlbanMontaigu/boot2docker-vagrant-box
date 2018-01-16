@@ -83,7 +83,7 @@ done
 ## Install our source-based applications
 # Xorriso for creating bootable ISOs
 # Last part will need to recompile ourself xorriso since syslinux (with isohybrid) nor xorriso exists as it in TCL in 64Bits
-XORRISO_VERSION=1.4.6
+XORRISO_VERSION=1.4.8
 curl -L -o "${LOCAL_TCZ_PATH}/xorriso-${XORRISO_VERSION}.tar.gz" "http://www.gnu.org/software/xorriso/xorriso-${XORRISO_VERSION}.tar.gz"
 tar -x -z -f "${LOCAL_TCZ_PATH}/xorriso-${XORRISO_VERSION}.tar.gz" -C /tmp/
 cd "/tmp/xorriso-${XORRISO_VERSION}"

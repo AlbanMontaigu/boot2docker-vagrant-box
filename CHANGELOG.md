@@ -1,6 +1,7 @@
 
 ## 17.12.0-ce (2018-01-16)
 - UPDATE: Update to [boot2docker 17.12.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.12.0-ce)
+- UPDATE: Update to xorriso 1.4.8
 
 ## 17.09.0-ce (2017-10-03)
 - UPDATE: Update to [boot2docker 17.09.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v17.09.0-ce)
