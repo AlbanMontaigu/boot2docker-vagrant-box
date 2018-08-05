@@ -1,5 +1,9 @@
 
-## 18.03.1-ce (2018-05-1)
+## 18.06.0-ce (2018-08-05)
+- UPDATE: Update to [boot2docker 18.06.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v18.06.0-ce)
+
+## 18.03.1-ce (2018-05-01)
+
 - UPDATE: Update to [boot2docker 18.03.1-ce](https://github.com/boot2docker/boot2docker/releases/tag/v18.03.1-ce)
 
 ## 18.03.0-ce (2018-03-25)
