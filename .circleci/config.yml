@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            wget https://releases.hashicorp.com/packer/1.0.4/packer_1.0.4_linux_amd64.zip -O /tmp/packer.zip && sudo unzip /tmp/packer.zip -d /usr/local/bin
+            wget https://releases.hashicorp.com/packer/1.2.5/packer_1.2.5_linux_amd64.zip -O /tmp/packer.zip && sudo unzip /tmp/packer.zip -d /usr/local/bin
             sudo apt-get -y update && sudo apt-get -y install m4
       - run:
           name: Make the packer file
