@@ -1,6 +1,7 @@
 
 ## 18.06.1-ce (2018-10-22)
 - UPDATE: Update to [boot2docker 18.06.1-ce](https://github.com/boot2docker/boot2docker/releases/tag/v18.06.1-ce)
+- UPDATE: update to packer 1.3.1 for circleci
 
 ## 18.06.0-ce (2018-08-05)
 - UPDATE: Update to [boot2docker 18.06.0-ce](https://github.com/boot2docker/boot2docker/releases/tag/v18.06.0-ce)
